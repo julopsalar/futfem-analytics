@@ -13,8 +13,8 @@ Some of the metrics used in the analysis:
 - *GoalDiff (and xGDiff) per 90 minutes*
 - *Points per 90 minutes*
 
-First version of the dashboard:
+Actual version of the dashboard:
 |||
 |---|---|
-| ![](images/img1.png) | ![](images/img2.png) |
-| ![](images/img3.png) | ![](images/img4.png) |
+| ![](md_images/img1.png) | ![](md_images/img2.png) |
+| ![](md_images/img3.png) | ![](md_images/img4.png) |
