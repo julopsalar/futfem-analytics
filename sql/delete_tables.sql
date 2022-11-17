@@ -1,0 +1,22 @@
+
+
+-- Event
+ALTER TABLE Event DROP CONSTRAINT FK_Event_Match;
+DROP TABLE Event;
+
+ALTER TABLE GkMatchStats DROP CONSTRAINT FK_GKMS_Player, FK_GKMS_Match;
+DROP TABLE GkMatchStats;
+
+ALTER TABLE PlayerMatchStats DROP CONSTRAINT FK_PMS_Player, FK_PMS_Match;
+DROP TABLE PlayerMatchStats;
+
+ALTER TABLE Shot DROP CONSTRAINT FK_Shot_Player, FK_Shot_Player1, FK_Shot_Player2, FK_Shot_Match, FK_Shot_Squad;
+DROP TABLE Shot;
+
+ALTER TABLE Match DROP CONSTRAINT FK_Match_Home, FK_Match_Away;
+DROP TABLE Match;
+ALTER TABLE SquadRecord DROP CONSTRAINT FK_Record_Squad;
+DROP TABLE SquadRecord;
+ALTER TABLE Player DROP CONSTRAINT FK_Player_Squad;
+DROP TABLE Player;
+DROP TABLE Squad;
