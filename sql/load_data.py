@@ -1,139 +1,148 @@
 from scraping import *
 import time
-import numpy as np
+import argparse
+import json
 
 # Database connection
 import sqlalchemy
 from sqlalchemy import text
-server = 'DESKTOP-B2GO7GM'  # to specify an alternate port
-database = 'football_v0'
-username = 'juanlop'
-password = '1234'
-
-engine = sqlalchemy.create_engine(
-    f'mssql+pyodbc://{username}:{password}@{server}/{database}?driver=SQL Server&Trusted_Connection=yes')
-conn = engine.connect()
-
 
 url_stats = 'https://fbref.com/en/comps/230/stats/Liga-F-Stats'
 url_rank = 'https://fbref.com/en/comps/230/Liga-F-Stats'
 url_matches = 'https://fbref.com/en/comps/230/schedule/Liga-F-Scores-and-Fixtures'
 
 
+def create_db_connection(args):
+    username = args['username']
+    password = args['password']
+    server = args['server']
+    database = args['database']
+
+    engine = sqlalchemy.create_engine(
+        f'mssql+pyodbc://{username}:{password}@{server}/{database}?driver=SQL Server&Trusted_Connection=yes')
+    conn = engine.connect()
+    return conn
+
 #    Loading 'Squad' table data
-# Read Squads info and insert into tables
-data = pd.read_csv('..\images.csv')
-# Drop if data was previously on the database
-try:
-    data.to_sql('Squad', conn, if_exists='append', index=False)
-except Exception as e:
-    print(f'{e.__class__} occured')
-
-res = conn.execute(text('SELECT * FROM Squad'))
-print(f'There are {len(res.all())} rows in Table \'Squad\'')
-
-
-#    'Player' data
-stats = get_tables_as_data(url=url_stats)
-players = stats[-1]
-players.columns = [c[1] for c in list(players)]
-players.drop_duplicates(subset=['Player'], keep=False, inplace=True)
-try:
-    players.iloc[:, 1:7].to_sql('Player', conn, if_exists='append', index=False)
-except Exception as e:
-    print(f'{e.__class__} occured')
-
-res = conn.execute(text('SELECT * FROM Player'))
-print(f'There are {len(res.all())} rows in Table \'Player\'')
-
-
-
-#    'SquadRecord'
-league_stats = get_tables_as_data(url_rank)
-league_rank, league_rank_ha = league_stats[0], league_stats[1]
-
-rk_squad = league_rank_ha.iloc[:, 0:2].droplevel(0, axis=1)
-
-league_rank_ha.drop(columns=['Rk', 'Squad'], level=1, inplace=True)
-dataset_ha = league_rank_ha.stack(0)
-dataset_ha.reset_index(level=1, inplace=True)
-dataset_ha.index += 1
-dataset_ha.reset_index(inplace=True)
-
-colnames = list(dataset_ha)
-colnames[colnames.index('index')] = 'Rk'
-colnames[colnames.index('level_1')] = 'H_A'
-colnames[colnames.index('Pts/MP')] = 'Pts_MP'
-colnames[colnames.index('xGD/90')] = 'xGD_90'
-dataset_ha.columns = colnames
-
-rk_ha = rk_squad.merge(dataset_ha, on=['Rk'])
-try:
-    rk_ha.to_sql('SquadRecord', conn, if_exists='append', index=False)
-except Exception as e:
-    print(f'{e.__class__} occured')
-
-res = conn.execute(text('SELECT * FROM SquadRecord'))
-print(f'There are {len(res.all())} rows in Table \'SquadRecord\'')
-
-
-
-#    'Match'
-matches_data = get_matches(url_matches)
-# Discarding not finished matches...
-matches_data = matches_data[matches_data['MatchID'] != '']
-matches_data.fillna('', inplace=True)
-try:
-    matches_data.to_sql('Match', conn, if_exists='append', index=False)
-except Exception as e:
-    print(f'{e.__class__} occured')
-
-res = conn.execute(text('SELECT * FROM Match'))
-print(f'There are {len(res.all())} rows in Table \'Match\'')
-
-
-'''
-    'Shot'  &   'PlayerMatchStats'  &   'GkMatchStats  &   'Event'
-'''
-
-'''
-# TODO:
-# Iterate in matches_data
-res = conn.execute(text('SELECT M.MatchID, M.Home, M.Away FROM Match M WHERE M.MatchID NOT IN \
-                        (SELECT E.MatchID FROM Event E)'))
-
-new_matches = [m for m in res.all()]
-for nm in new_matches[0:20]:
-    id, home, away = nm
-    print(id)
-    events = parse_match_report(id, home, away)
+def load_squads(conn, file='..\images.csv'):
+    data = pd.read_csv(file)
+    # Drop if data was previously on the database
     try:
-        events.to_sql('Event', conn, if_exists='append', index=False)
+        data.to_sql('Squad', conn, if_exists='append', index=False)
     except Exception as e:
-        print(f'{e}')
-    
-    players_raw, shots, gk = process_match_data(id)
-    players = clean_players_raw(players_raw)
+        print(f'{e.__class__} occured')
+
+    existing_data = pd.read_sql_table('Squad', conn)
+    print(f'Table \'Squad\': ', existing_data.shape)
+
+
+def load_squads_rank(conn, url_rank):
+
+    rank_ha = get_rank(url_rank)
     try:
-        players.to_sql('PlayerMatchStats', conn, if_exists='append', index=False)
-        shots.to_sql('Shot', conn, if_exists='append', index=False)
-        gk.to_sql('GkMatchStats', conn, if_exists='append', index=False)
+        rank_ha.to_sql('SquadRecord', conn, if_exists='append', index=False)
     except Exception as e:
-        print(f'{e} occured')
-        #print(players, shots, gk)
-        res = conn.execute(text('SELECT P.Player FROM Player P'))
-        print([x[0] for x in res.all()])
-        
-    time.sleep(2)
-    #print(f'Processed Match {id}')
+        print(f'{e.__class__} occured')
+
+    existing_data = pd.read_sql_table('SquadRecord', conn)
+    print(f'Table \'SquadRecord\': ', existing_data.shape)
 
 
-# Check if select returns any row
-#   if so, continue
-#   else: parse matchID, Home, Away
+def load_players(conn, url):
+    players = get_players(url)
+
+    try:
+        players.to_sql('Player', conn, if_exists='append', index=False)
+    except Exception as e:
+        print(f'{e.__class__} occured')
+
+    existing_data = pd.read_sql_table('Player', conn)
+    print(f'Table \'Player\': ', existing_data.shape)
 
 
-# Merge all new data and insert into de database
-'''
+def load_matches(conn, url_match):
+    matches_data = get_matches(url_match, ['matches', 'squads'])
+    matches_data = matches_data[matches_data['MatchID'] != '']
 
-conn.close()
+    try:
+        matches_data.to_sql('Match', conn, if_exists='append', index=False)
+    except Exception as e:
+        print(f'{e.__class__} occured')
+
+    existing_data = pd.read_sql_table('Match', conn)
+    print(f'Table \'Match\': ', existing_data.shape)
+
+    res = conn.execute(text('SELECT M.MatchID, M.Home, M.Away FROM Match M WHERE M.MatchID NOT IN \
+                            (SELECT E.MatchID FROM Event E)'))
+
+    new_matches = [m for m in res.all()]
+
+    for nm in new_matches:
+        id, home, away = nm
+
+        events = get_match_events(id, home, away)
+        try:
+            events.to_sql('Event', conn, if_exists='append', index=False)
+        except Exception as e:
+            print(f'{e.__class__}')
+            print('Error processing match ', id)
+            continue
+
+        players, gk, shots = process_match_data(id, home, away)
+        #print('\tINTEGER, \n\t'.join(players.columns))
+        #players = clean_players_raw(players_raw)
+        try:
+            players.replace('', 0, inplace=True)
+            players.to_sql('PlayerMatchStats', conn,
+                           if_exists='append', index=False)
+            print('players')
+            # shots.to_csv('shots.csv')
+            shots.to_sql('Shot', conn, if_exists='append', index=False)
+            print('shots')
+            gk.to_sql('GkMatchStats', conn, if_exists='append', index=False)
+            print('gk')
+        except Exception as e:
+            print(f'{e.__class__} occured')
+            #res = conn.execute(text('SELECT P.Player FROM Player P'))
+            #print([x[0] for x in res.all()])
+
+        time.sleep(9)
+        print(f'Processed Match {id}')
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(
+        description='Football Data Scraping from FBref.com')
+    # Squad + SquadRecord
+    parser.add_argument('-s', dest='squads',
+                        action=argparse.BooleanOptionalAction, default=False)
+    # Players data
+    parser.add_argument('-p', dest='players',
+                        action=argparse.BooleanOptionalAction, default=False)
+    # Matches & PlayerStat & GkStat & Events & Shots
+    parser.add_argument('-m', dest='matches',
+                        action=argparse.BooleanOptionalAction, default=False)
+    # Database info
+    parser.add_argument('-d', dest='db_info',
+                        action='store', default='db.json')
+    # All
+    parser.add_argument(
+        '-a', dest='all', action=argparse.BooleanOptionalAction, default=False)
+    args = parser.parse_args()
+
+    if not (args.squads | args.players | args.matches | args.all):
+        print('No data to update...')
+    else:
+        # Create connection from db file info
+        with open(args.db_info) as db:
+            connection = create_db_connection(json.load(db))
+        # Squad & SquadRank
+        if args.squads | args.all:
+            load_squads(conn=connection)
+            load_squads_rank(conn=connection, url_rank=url_rank)
+        # Player
+        if args.players | args.all:
+            load_players(conn=connection, url=url_stats)
+        # Match & Shot & PlayerMatchStat & GkMatchStat
+        if args.matches | args.all:
+            load_matches(conn=connection, url_match=url_matches)

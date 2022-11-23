@@ -3,89 +3,124 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
-import numpy as np
 
-def get_tables_as_data(url, element='table'):
+# To avoid useless warnings
+pd.options.mode.chained_assignment = None  # default='warn'
+
+
+def scrape_elements(url, element='table'):
+    # Returns a list of html table
     res = requests.get(url)
     # The next two lines get around the issue with comments breaking the parsing.
     comm = re.compile("<!--|-->")
     soup = BeautifulSoup(comm.sub("", res.text), 'lxml')
+    elements = [t for t in soup.find_all(element)]
+    return elements
 
-    data = [pd.read_html(str(t))[0] for t in soup.find_all(element)]
+
+def get_tables_as_data(url, element='table', extract_links=None):
+    # For each element, convert to dataframe and return the list of them
+    html_elements = scrape_elements(url, element)
+    data = [pd.read_html(str(e), extract_links=extract_links)[0]
+            for e in html_elements]
+    # Drop duplicates and null rows
+    data = [d.drop_duplicates(keep=False).reset_index(drop=True) for d in data]
     return data
 
-def get_matches(url, element='table'):
-    res = requests.get(url)
-    ## The next two lines get around the issue with comments breaking the parsing.
-    comm = re.compile("<!--|-->")
-    soup = BeautifulSoup(comm.sub("",res.text),'lxml')
-    
-    data = [t for t in soup.find_all(element)]
-    # Links are contained in <a> sections, with the text 'Match Report'
-    match_link = re.compile("Match Report")
-    # Extracting links for the reports
-    links = [ link['href'] for link in data[0].find_all('a', href=True) if match_link.match(link.contents[0]) ]    
-    df = pd.read_html(str(data[0]))[0]
-    # Fill matches that dont have Match Report (future matches)
-    while len(links) < df.shape[0]: links.append('')
-    # Modifying links to access after 
-    df['Match Report'] = links
-    # Setting id
-    ids = [ ]
-    for mr in df['Match Report']:
-        id = re.search(r'.*/matches/(.*)/.*', mr)
-        if id:
-            ids.append(id.groups()[0])
-        else:
-            ids.append('')
-    df['MatchID'] = ids
-    # Drop invalid rows and convert Week number to integer
-    df = df[df['Wk'].notna()]
-    df.Wk = df.Wk.astype(int)
-    # Clean columns names
-    colnames = list(df)
-    colnames[colnames.index('xG')] = 'xG_Home'
-    colnames[colnames.index('xG.1')] = 'xG_Away'
-    colnames[colnames.index('Match Report')] = 'MatchReport'
-    df.columns = colnames
 
+def parse_link(link, link_marks):
+    for m in link_marks:
+        regex = (r'(.+/'+f'{m}'+r'/)([^/]+)/([^/]*)$')
+        s = re.search(regex, link)
+        if s:
+            return s.groups()[1]
+    return ''
+
+def convert_link_table(data, avoid_cols, marks):
+    for col in data:
+        if col not in avoid_cols:
+            data[col] = data[col].apply(lambda x: x[0])
+        else:
+            data[col] = data[col].apply(
+                lambda x: parse_link(str(x[1]), marks))
+        # Replace spaces in name
+        data.rename(columns={col: col.replace(" ", "")
+                                    .replace('%', '_100')
+                                    .replace('/', '_')
+                                    .replace('+', '_plus_')}, inplace=True)
+    return data
+
+def get_rank(url):
+    stats = get_tables_as_data(url, extract_links='body')
+    rank, rank_ha = stats[0], stats[1]
+    rk_squad = rank_ha.iloc[:, 0:2].droplevel(0, axis=1)
+    rk_squad['Rk'] = rk_squad['Rk'].apply(lambda x: int(x[0]))
+    rk_squad['Squad'] = rk_squad['Squad'].apply(lambda x: parse_link(str(x[1]), ['squads']))
+    
+    for col in rank_ha:
+        rank_ha[col] = rank_ha[col].apply(lambda x: x[0])
+    
+    rank_ha = rank_ha.iloc[:,2:]
+    rank_ha = rank_ha.stack(0)
+    rank_ha.index = rank_ha.index.set_names(['Rk', 'H_A'])
+    rank_ha.reset_index(inplace=True)
+    rank_ha['Rk'] += 1
+    rank_ha.rename(columns=(lambda x: x.replace('/', '_')), inplace=True)
+    rank_ha['SquadID'] = [rk_squad[rk_squad['Rk'] == n]['Squad'].values[0] for n in rank_ha['Rk']]
+    
+    return rank_ha
+
+def get_players(url):
+    stats = get_tables_as_data(url, extract_links='body')
+    players = stats[-1]
+    players = players.iloc[:,1:7]
+    players.columns = [c[1] for c in list(players)]
+    cols = ['Player', 'Squad']
+    for c in players:
+        if c not in cols:
+            players[c] = players[c].apply(lambda x: x[0])
+    players['Squad'] = players['Squad'].apply(lambda x: parse_link(str(x[1]), ['squads']))
+    players[['Player', 'PlayerID']] = pd.DataFrame(players['Player'].to_list(), index=players.index)
+    players['PlayerID'] = players['PlayerID'].apply(lambda x: parse_link(str(x), ['players']))
+
+    return players
+
+def get_matches(url, link_marks):
+    data = get_tables_as_data(url, extract_links='body')
+    df = data[0]
+
+    cols = ['Home', 'Away', 'Match Report']
+    df = convert_link_table(df, cols, link_marks)
+    df.rename(columns={
+        'MatchReport':'MatchID',
+        'xG' : 'xG_Home',
+        'xG.1' : 'xG_Away'
+    }, inplace=True)
     return df
 
-
-
-
-def clean_event_html(event, matchID, team):
+def clean_event_html(event, match, team):
     text = event.text
+    players = event.find_all('a')
+    
     # Cleaning raw text
     text = re.sub(r'\s{2,}', '$', text)
-    text = re.sub(r'(&rsquor;)|(—\s)', '', text)
+    text = re.sub(r'(&rsquor;)|(—\s*)', '', text)
     text = re.sub(r'(\$Assist:)|(for\s)', '', text)
     text = [t for t in text.split('$') if t]
-    # Own Goals are special..
-    try:
-        og = text.index('Own Goal')
-        if og > 0:
-            text.insert(og, '')
-            text.pop()
-    except:
-        None
-    # Fill non full row
-    if len(text) < 5:
+    text[2] = parse_link(players[0]['href'], ['players'])
+    if len(players) == 2:
+        text[3] = parse_link(players[1]['href'], ['players'])
+    else:
         text.insert(3, '')
-    text.insert(len(text), '')
+    
     text.insert(0, team)
-    text.insert(0, matchID)
-    # Extract notes
-    notes = re.match(r'Goal\s(.*)', text[-2])
-    if notes:
-        text[-2] = 'Goal'
-        text[-1] = notes.group(1)
+    text.insert(0, match)
+    text[-1] = re.sub(r'Goal \d+:\d+', 'Goal', text[-1])
+    
     return text
 
-
-def parse_match_report(matchID, homeTeam, awayTeam):
-
-    url = f'https://fbref.com/en/matches/{matchID}/'
+def get_match_events(match, homeTeam, awayTeam):
+    url = f'https://fbref.com/en/matches/{match}/'
     res = requests.get(url)
     comm = re.compile("<!--|-->")
     soup = BeautifulSoup(comm.sub("", res.text), 'lxml')
@@ -94,119 +129,103 @@ def parse_match_report(matchID, homeTeam, awayTeam):
     home_events = events_div.find_all('div', {'class': 'event a'})
     away_events = events_div.find_all('div', {'class': 'event b'})
 
-    # CSV Headers
-    headers = 'MatchID', 'Team', 'Minute', 'Score', 'Player1',	'Player2', 'Event', 'Notes'
     events = []
-    for e in home_events:
-        events.append(clean_event_html(e, matchID, homeTeam))
-    for e in away_events:
-        events.append(clean_event_html(e, matchID, awayTeam))
+    events.extend([clean_event_html(h, match, homeTeam) for h in home_events])
+    events.extend([clean_event_html(a, match, awayTeam) for a in away_events])
+    headers = 'MatchID', 'SquadID', 'Minute', 'Score', 'Player1',	'Player2', 'Event'
+    return pd.DataFrame(events, columns=headers)
 
-    data = pd.DataFrame(events, columns=headers)
-    return data
+# Juntar dataframes y limpiar columnas...
+def merge_team_match_stats(df_list, team, match):
+    ignoring_headers = ['Performance', 'Expected', 'SCA', 'GCA', 'Shot Stopping']
+    avoid_links = ['Player', 'Squad', 'SCA1_Player', 'SCA2_Player']
+    link_marks = ['players', 'squads']
 
+    for idx, d in enumerate(df_list):
+        colnames = []
+        for col in d:
+            if (re.match(r'Unnamed.*', col[0])) or (col[0] in ignoring_headers):
+                colnames.append(col[1])
+            else:
+                colnames.append(str(col[0]+'_'+col[1]).replace(' ', ''))
 
-def get_match_stats(url, element='table'):
-    res = requests.get(url)
-    comm = re.compile("<!--|-->")
-    soup = BeautifulSoup(comm.sub("", res.text), 'lxml')
-
-    data = [pd.read_html(str(t))[0] for t in soup.find_all(element)]
-    return data
-
-# Receiving a multilevel-column dataframe, mixes both level names and drops unused level
-def drop_level_column(data, ignore=[]):
-    new_cols = []
-    for c in list(data):
-        if (re.match(r'Unnamed.*', c[0]) is not None) | (c[0] in ignore):
-            new_cols.append(c[1])
+        d.droplevel(0, 1)
+        d.columns = colnames
+        # Drop non valid rows
+        d = d[~d['Age'].isna()]
+        d = convert_link_table(d, avoid_links, link_marks)
+        '''for col in d:
+            if col not in avoid_links:
+                d[col] = d[col].apply(lambda x: x[0])
+            else:
+                d[col] = d[col].apply(
+                    lambda x: parse_link(str(list(x)[1]), link_marks))
+        '''        
+        if idx == 0:
+            base = pd.DataFrame(d)
         else:
-            new_cols.append(c[0].replace(' ', '') + '_' + c[1])
-    data.columns = new_cols
+            base = pd.merge(base, d, on=list(d.columns.intersection(list(base))))
 
-# Merges multiple dataframe based on 'base' dataframe columns
-def merge_stats_player(base, others, not_headers, output=None):
-    drop_level_column(base, ignore=not_headers)
-    base = base[base.columns.drop(
-        list(base.filter(regex=r'(Passes.*)|(Dribbles.*)')))]
+    base.rename(columns=(lambda x: x.replace('%', '_100')
+                         .replace('1_3', 'Third')
+                         .replace('+', '_plus_')
+                         .replace('2CrdY', 'SndCardY')
+                         .replace('Player', 'PlayerID')
+                         .replace('Off', 'Offs')), inplace=True)
 
-    for d in others:
-        drop_level_column(d, ignore=['Performance', 'Touches'])
-        # Merge by common columns
-        base = pd.merge(base, d, on=list(d.columns.intersection(list(base))))
+    if team: base['SquadID'] = [team] * base.shape[0]
+    base['MatchID'] = [match] * base.shape[0]
 
-    if output:
-        base.to_csv(output + '.csv', index=False)
     return base
 
+def parse_shot_data(df, match):
+    colnames = []
+    for col in list(df):
+        if (re.match(r'Unnamed.*', col[0])):
+            colnames.append(col[1].replace(' ', '_'))
+        else:
+            colnames.append(str(col[0]+'_'+col[1]).replace(' ', ''))
+    df.droplevel(0, 1)
+    df.columns = colnames
+    
+    for col in df:
+        if re.match(r'(.*Player)|(.*Squad)', col):
+            df[col] = df[col].apply(lambda x: parse_link(str(list(x)[1]), ['players', 'squads']))
+        else:
+            df[col] = df[col].apply(lambda x: x[0])
+    df = df[df['Player'].astype(bool)]
+    df['PSxG'] = df['PSxG'].replace('', 0)
+    df['MatchID'] = [match] * df.shape[0]
+    return df
 
-def process_match_data(matchID):
+def process_match_data(matchID, homeTeam, awayTeam):
     url = f'https://fbref.com/en/matches/{matchID}/'
-    data = get_match_stats(url)
-    # Ignore multiindex columns names
-    not_headers = ['Performance', 'Expected', 'SCA']
-
-    # Select data from list of dataframes
-    #   Full Players Stats
+    data = get_tables_as_data(url, extract_links='body')
+    
+    # Home team
     #   Summary --> Passing --> Pass Types --> Defensive Actions --> Possession --> Miscellaneous Stats
-    players_home = data[-17:-11]
-    players_away = data[-10:-4]
+    home_data = data[3:9]
+    home_stats = merge_team_match_stats(home_data, homeTeam, matchID)
+    # Away Team
+    away_data = data[10:16]
+    away_stats = merge_team_match_stats(away_data, awayTeam, matchID)
+    player_match = pd.concat([home_stats, away_stats])
+    #player_match.to_csv('player_match.csv', index=False)
 
-    summary_home = players_home[0]
-    home_stats = merge_stats_player(summary_home, players_home[1:], not_headers) 
-    summary_away = players_away[0]
-    away_stats = merge_stats_player(summary_away, players_away[1:], not_headers)
-    # Merge all players and drop non valid rows
-    joined = pd.concat([home_stats, away_stats])
-    joined.drop_duplicates(subset=['Player'], keep=False, inplace=True)
-    joined['MatchID'] = [matchID] * joined.shape[0]
-
-    #   Shots data
-    shots = data[-3]
-    drop_level_column(shots)
-    shots.columns = [re.sub(r'\s', '_', c) for c in list(shots)]
-    shots['MatchID'] = [matchID]*shots.shape[0]
-    shots.fillna('', inplace=True)
-    shots = shots[shots['Minute'] != '']
-    shots = shots.replace(r'^\s*$', None, regex=True)
+    # Goalkeeping
+    home_gk = data[9]
+    home_gk = merge_team_match_stats([home_gk], homeTeam, matchID)
     
-    #   Goalkeeping
-    gk, gk2 = data[-11], data[-4]
-    drop_level_column(gk, ignore=['Shot Stopping'])
-    drop_level_column(gk2, ignore=['Shot Stopping'])
-    gk.fillna('', inplace=True)
-    gk2.fillna('', inplace=True)
+    away_gk = data[16]
+    away_gk = merge_team_match_stats([away_gk], awayTeam, matchID)
+    gk_match = pd.concat([home_gk, away_gk])
+    #print(' INTEGER,\n\t'.join(gk_match.columns))
+    gk_match.to_csv('gk_match.csv', index=False)
 
-    gk_match = pd.concat([gk, gk2]).reset_index().drop(columns=['index'])
-    gk_match['MatchID'] = [matchID]*gk_match.shape[0]
-    colnames = list(gk_match)
-    colnames[colnames.index('Min')] = 'Minutes'
-    colnames[colnames.index('Save%')] = 'Save_100'
-    colnames[colnames.index('Launched_Cmp%')] = 'Launched_Cmp_100'
-    colnames[colnames.index('Passes_Launch%')] = 'Passes_Launch_100'
-    colnames[colnames.index('GoalKicks_Launch%')] = 'GoalKicks_Launch_100'
-    colnames[colnames.index('Crosses_Stp%')] = 'Crosses_Stp_100'
-    gk_match.columns = colnames
-
-    return joined, shots, gk_match
-
-def clean_players_raw(data):
-    # Drop % columns
-    r = re.compile(".*%.*")
-    del_cols = list(filter(r.match, list(data)))
-    players = data.drop(columns=del_cols)
-    # Delete rows that sum all players (i.e Player = '15 players')
-    filtered = players['Player'].str.contains(r'^\d+')
-    players = players[~filtered]
+    # Shoting
+    shoting = data[17]
+    shoting = parse_shot_data(shoting, matchID)
+    #shoting = merge_team_match_stats([shoting], None, matchID)
+    #shoting.to_csv('shot.csv', index=False)
     
-    # Modify some colnames according to DataBase Table names
-    newcols = list(players)
-    newcols[newcols.index('Off')] = 'Offs'
-    newcols[newcols.index('Tkl+Int')] = 'Tkl_plus_Intr'
-    newcols[newcols.index('Int')] = 'Intr'
-    newcols[newcols.index('1/3')] = 'Third'
-    newcols[newcols.index('Min')] = 'Minu'
-    newcols[newcols.index('2CrdY')] = 'SndCrdY'
-    newcols = [re.sub(r'\s', '_', c) for c in newcols]
-    players.columns = newcols
-    return players
+    return player_match, gk_match, shoting
