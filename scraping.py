@@ -147,6 +147,10 @@ def get_match_data(match_id, home, away):
     match_url = f'https://fbref.com/en/matches/{match_id}'
     all_data = get_tables_as_data(match_url, extract_links='body')
     
+    if len(all_data) < 18:
+        print('bad request, ', match_id)
+        return None, None, None
+
     # 0,1 -> lineups
     # 2 possession, passing, ...
     # 3,4,5,6,7,8 -> players_home
@@ -165,10 +169,11 @@ def get_match_data(match_id, home, away):
         away_data['SquadID'] = [away] * away_data.shape[0]
         away_data['MatchID'] = [match_id] * away_data.shape[0]
         dfs.append(away_data)
-    
-    h = pd.concat(dfs[:6], axis=1)
-    a = pd.concat(dfs[6:], axis=1)
-    
+    try:
+        h = pd.concat(dfs[:6], axis=1)
+        a = pd.concat(dfs[6:], axis=1)
+    except:
+        return None, None, None
     # 9 -> gk_home
     # 16 -> gk_away
     h_gk, a_gk = all_data[9], all_data[16]
