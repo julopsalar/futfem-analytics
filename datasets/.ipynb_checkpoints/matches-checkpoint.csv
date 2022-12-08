@@ -1,0 +1,307 @@
+Wk,Day,Date,Time,Home,xGHome,Score,xGAway,Away,Home_id,Away_id,Match_id,League_id,xPHome,xPAway,ScoreHome,ScoreAway
+2,Sat,2022-09-17,12:00,Barcelona,1.9,2–0,0.4,UDG Tenerife,15f49df1,4c088abe,4df3a732,230,2.4,0.4,2,0
+2,Sat,2022-09-17,12:00,Alavés,1.1,1–2,1.2,Madrid CFF,aa11fb42,89818574,87c755cd,230,1.29,1.43,1,2
+2,Sat,2022-09-17,16:00,Real Sociedad,0.7,2–0,0.3,Villarreal,c21f25d3,7a7bef84,abfde9d9,230,1.68,0.87,2,0
+2,Sat,2022-09-17,16:00,Real Madrid,1.6,2–0,0.8,Valencia,54582b93,f96ff499,d0329f46,230,1.94,0.8,2,0
+2,Sat,2022-09-17,18:00,Sevilla,1.1,1–3,1.4,Atlético Madrid,215d9026,b56c2667,f4452586,230,1.15,1.58,1,3
+2,Sun,2022-09-18,12:00,Alhama,0.7,2–3,2.1,Levante,e9fecaf2,0f4738a8,b2402e4e,230,0.52,2.29,2,3
+2,Sun,2022-09-18,12:00,Athletic Club,3.1,3–0,0.2,Sporting Huelva,94929c05,27acb0af,d320ccc0,230,2.84,0.1,3,0
+2,Sun,2022-09-18,18:00,Real Betis,0.3,1–2,1.3,Levante Planas,74142337,753b93a5,ddc9ce5c,230,0.54,2.17,1,2
+3,Sat,2022-09-24,12:00,Madrid CFF,3.4,3–1,0.5,Levante Planas,89818574,753b93a5,5a55bc4f,230,2.78,0.15,3,1
+3,Sat,2022-09-24,12:00,Sporting Huelva,0.5,1–0,0.8,Alhama,27acb0af,e9fecaf2,8c012533,230,1.03,1.57,1,0
+3,Sat,2022-09-24,16:00,Valencia,2.8,2–0,1.3,Sevilla,f96ff499,215d9026,e777f569,230,2.22,0.62,2,0
+3,Sat,2022-09-24,18:00,Real Sociedad,2.8,2–2,0.6,Real Betis,c21f25d3,74142337,799cf7ad,230,2.6,0.28,2,2
+3,Sun,2022-09-25,12:00,Atlético Madrid,2.3,1–0,0.0,Alavés,b56c2667,aa11fb42,ad54c9ef,230,2.8,0.1,1,0
+3,Sun,2022-09-25,17:00,Villarreal,0.5,1–4,2.9,Barcelona,7a7bef84,15f49df1,6a01f711,230,0.22,2.68,1,4
+3,Sun,2022-09-25,19:00,Levante,0.4,2–0,0.4,Athletic Club,0f4738a8,94929c05,989342a1,230,1.24,1.24,2,0
+4,Sat,2022-10-01,12:00,Alavés,1.7,0–4,2.4,Villarreal,aa11fb42,7a7bef84,0540f7dd,230,1.01,1.79,0,4
+4,Sat,2022-10-01,12:00,Real Betis,0.4,1–2,1.5,UDG Tenerife,74142337,4c088abe,f73a565a,230,0.54,2.2,1,2
+4,Sat,2022-10-01,16:00,Sporting Huelva,0.3,0–0,0.5,Valencia,27acb0af,f96ff499,ba2b31a0,230,1.03,1.45,0,0
+4,Sat,2022-10-01,18:15,Barcelona,2.7,7–0,0.7,Madrid CFF,15f49df1,89818574,1f2a3a7f,230,2.51,0.35,7,0
+4,Sun,2022-10-02,12:00,Levante Planas,2.7,3–1,1.6,Alhama,753b93a5,e9fecaf2,1183b290,230,2.01,0.81,3,1
+4,Sun,2022-10-02,12:00,Levante,0.9,2–1,1.3,Atlético Madrid,0f4738a8,b56c2667,8ac79dea,230,1.06,1.65,2,1
+4,Sun,2022-10-02,16:00,Sevilla,1.7,2–2,1.3,Real Sociedad,215d9026,c21f25d3,c812444e,230,1.64,1.12,2,2
+4,Sun,2022-10-02,18:00,Athletic Club,0.5,0–3,1.5,Real Madrid,94929c05,54582b93,18efae97,230,0.62,2.12,0,3
+5,Sat,2022-10-15,12:00,Levante Planas,0.3,1–1,2.2,Levante,753b93a5,0f4738a8,b666c172,230,0.26,2.59,1,1
+5,Sat,2022-10-15,12:00,Real Sociedad,2.0,1–1,0.8,UDG Tenerife,c21f25d3,4c088abe,e20140d7,230,2.17,0.62,1,1
+5,Sat,2022-10-15,16:00,Atlético Madrid,3.8,5–0,0.1,Sporting Huelva,b56c2667,27acb0af,b954009a,230,2.94,0.04,5,0
+5,Sat,2022-10-15,17:45,Athletic Club,0.2,0–3,2.8,Barcelona,94929c05,15f49df1,139e63cd,230,0.13,2.79,0,3
+5,Sun,2022-10-16,12:00,Real Madrid,3.0,7–1,0.3,Alavés,54582b93,aa11fb42,80948039,230,2.79,0.13,7,1
+5,Sun,2022-10-16,12:00,Villarreal,0.4,0–5,2.2,Sevilla,7a7bef84,215d9026,aeb79023,230,0.31,2.53,0,5
+5,Sun,2022-10-16,16:00,Alhama,0.9,0–1,0.9,Valencia,e9fecaf2,f96ff499,cd076cd7,230,1.34,1.33,0,1
+5,Sun,2022-10-16,18:00,Madrid CFF,2.1,4–0,0.2,Real Betis,89818574,74142337,3258462a,230,2.62,0.23,4,0
+6,Sat,2022-10-22,12:00,Alavés,0.6,1–1,1.1,Athletic Club,aa11fb42,94929c05,814ef50d,230,0.93,1.74,1,1
+6,Sat,2022-10-22,12:00,Atlético Madrid,1.9,1–1,0.3,Madrid CFF,b56c2667,89818574,9eb749ee,230,2.48,0.34,1,1
+6,Sat,2022-10-22,16:00,Sporting Huelva,1.3,0–2,1.7,Real Sociedad,27acb0af,c21f25d3,bc1e21ba,230,1.11,1.65,0,2
+6,Sat,2022-10-22,18:15,Real Betis,0.0,0–3,2.8,Barcelona,74142337,15f49df1,fb611742,230,0.06,2.88,0,3
+6,Sun,2022-10-23,11:00,UDG Tenerife,1.3,2–0,0.6,Villarreal,4c088abe,7a7bef84,b1300ce6,230,1.9,0.81,2,0
+6,Sun,2022-10-23,11:00,Levante,1.3,2–2,0.9,Real Madrid,0f4738a8,54582b93,ec7587cb,230,1.65,1.06,2,2
+6,Sun,2022-10-23,16:00,Valencia,1.5,1–1,0.6,Levante Planas,f96ff499,753b93a5,58706145,230,2.03,0.71,1,1
+6,Sun,2022-10-23,18:00,Sevilla,1.5,2–0,0.1,Alhama,215d9026,e9fecaf2,e6fe4464,230,2.46,0.3,2,0
+7,Sat,2022-10-29,11:45,Athletic Club,0.9,1–4,1.9,Atlético Madrid,94929c05,b56c2667,30cbd0d6,230,0.74,2.04,1,4
+7,Sat,2022-10-29,12:00,Madrid CFF,1.9,2–0,0.2,UDG Tenerife,89818574,4c088abe,493b7bef,230,2.56,0.27,2,0
+7,Sat,2022-10-29,16:00,Alavés,0.4,1–5,2.2,Real Sociedad,aa11fb42,c21f25d3,8838f1cd,230,0.32,2.52,1,5
+7,Sat,2022-10-29,18:15,Alhama,1.0,0–2,1.3,Real Betis,e9fecaf2,74142337,c4bba788,230,1.15,1.57,0,2
+7,Sun,2022-10-30,12:00,Levante Planas,1.5,1–2,1.6,Sporting Huelva,753b93a5,27acb0af,1c234734,230,1.31,1.45,1,2
+7,Sun,2022-10-30,12:00,Barcelona,2.2,2–1,1.2,Levante,15f49df1,0f4738a8,276c52e3,230,2.0,0.8,2,1
+7,Sun,2022-10-30,16:00,Villarreal,0.8,1–1,1.0,Valencia,7a7bef84,f96ff499,cd61c3ba,230,1.18,1.49,1,1
+7,Sun,2022-10-30,19:00,Real Madrid,0.9,2–0,1.0,Sevilla,54582b93,215d9026,261f6426,230,1.26,1.42,2,0
+1,Tue,2022-11-01,16:00,Atlético Madrid,1.5,1–1,1.4,Real Sociedad,b56c2667,c21f25d3,b39cbf7b,230,1.43,1.31,1,1
+1,Tue,2022-11-01,17:00,UDG Tenerife,0.7,0–2,0.4,Athletic Club,4c088abe,94929c05,8b892b0c,230,1.58,0.99,0,2
+1,Tue,2022-11-01,20:00,Alhama,0.5,0–3,1.1,Madrid CFF,e9fecaf2,89818574,5365c2d5,230,0.83,1.84,0,3
+1,Wed,2022-11-02,19:00,Sporting Huelva,0.7,1–1,2.0,Sevilla,27acb0af,215d9026,90a9cbdc,230,0.57,2.23,1,1
+1,Wed,2022-11-02,19:00,Levante,1.7,2–1,0.3,Alavés,0f4738a8,aa11fb42,e35454bb,230,2.39,0.39,2,1
+1,Wed,2022-11-02,21:00,Valencia,2.2,3–0,0.3,Real Betis,f96ff499,74142337,9a950618,230,2.59,0.26,3,0
+1,Thu,2022-11-03,18:45,Villarreal,0.4,0–4,1.4,Real Madrid,7a7bef84,54582b93,2f768445,230,0.58,2.14,0,4
+1,Thu,2022-11-03,21:00,Levante Planas,0.1,0–4,2.0,Barcelona,753b93a5,15f49df1,31ab4b36,230,0.19,2.66,0,4
+8,Sat,2022-11-05,12:00,Valencia,2.0,1–2,0.7,Athletic Club,f96ff499,94929c05,8c204b99,230,2.24,0.56,1,2
+8,Sat,2022-11-05,12:00,Real Sociedad,1.6,0–2,2.1,Madrid CFF,c21f25d3,89818574,9d498223,230,1.1,1.69,0,2
+8,Sat,2022-11-05,16:00,Atlético Madrid,1.6,1–0,0.3,Alhama,b56c2667,e9fecaf2,cca542a7,230,2.34,0.43,1,0
+8,Sat,2022-11-05,18:15,Levante,3.9,3–0,0.4,Sporting Huelva,0f4738a8,27acb0af,e203cb71,230,2.87,0.08,3,0
+8,Sun,2022-11-06,11:00,UDG Tenerife,1.0,1–1,1.1,Alavés,4c088abe,aa11fb42,5ef698fd,230,1.28,1.43,1,1
+8,Sun,2022-11-06,12:00,Villarreal,1.4,0–3,1.7,Real Betis,7a7bef84,74142337,2f526138,230,1.18,1.58,0,3
+8,Sun,2022-11-06,16:00,Sevilla,1.4,5–0,0.8,Levante Planas,215d9026,753b93a5,44d7e125,230,1.8,0.92,5,0
+8,Sun,2022-11-06,18:00,Real Madrid,0.4,0–4,3.4,Barcelona,54582b93,15f49df1,b0c2dbac,230,0.12,2.82,0,4
+9,Sat,2022-11-19,12:00,Alhama,0.5,1–0,0.5,UDG Tenerife,e9fecaf2,4c088abe,b8a462d1,230,1.27,1.27,1,0
+9,Sat,2022-11-19,16:00,Sporting Huelva,0.9,0–1,1.6,Real Madrid,27acb0af,54582b93,6c4786df,230,0.89,1.86,0,1
+9,Sat,2022-11-19,18:15,Valencia,1.2,4–2,2.4,Levante,f96ff499,0f4738a8,f6fb9de4,230,0.72,2.1,4,2
+9,Sat,2022-11-19,20:00,Athletic Club,0.6,1–3,1.3,Real Sociedad,94929c05,c21f25d3,0b10cc6e,230,0.8,1.92,1,3
+9,Sun,2022-11-20,12:00,Barcelona,5.3,8–0,0.1,Alavés,15f49df1,aa11fb42,ec293233,230,2.98,0.01,8,0
+9,Sun,2022-11-20,14:00,Levante Planas,0.6,1–2,1.9,Atlético Madrid,753b93a5,b56c2667,3eb4df75,230,0.53,2.27,1,2
+9,Sun,2022-11-20,16:00,Real Betis,0.7,3–0,1.9,Sevilla,74142337,215d9026,fd302be0,230,0.59,2.19,3,0
+9,Sun,2022-11-20,18:00,Madrid CFF,1.1,1–2,0.8,Villarreal,89818574,7a7bef84,cfb7e617,230,1.59,1.1,1,2
+10,Sat,2022-11-26,12:00,Levante,2.2,5–1,1.3,Sevilla,0f4738a8,215d9026,16dc7b9c,230,1.93,0.86,5,1
+10,Sat,2022-11-26,12:00,Madrid CFF,1.2,2–3,0.6,Sporting Huelva,89818574,27acb0af,e4203147,230,1.83,0.86,2,3
+10,Sat,2022-11-26,16:00,Villarreal,1.3,1–6,2.4,Athletic Club,7a7bef84,94929c05,a267cc52,230,0.78,2.04,1,6
+10,Sat,2022-11-26,18:15,Real Madrid,3.1,5–1,0.7,Alhama,54582b93,e9fecaf2,2bb592d4,230,2.64,0.26,5,1
+10,Sun,2022-11-27,11:00,UDG Tenerife,1.6,1–0,0.9,Valencia,4c088abe,f96ff499,596794cb,230,1.87,0.88,1,0
+10,Sun,2022-11-27,12:00,Alavés,2.6,3–1,1.3,Real Betis,aa11fb42,74142337,5af98672,230,2.14,0.69,3,1
+10,Sun,2022-11-27,14:00,Real Sociedad,3.5,3–0,0.5,Levante Planas,c21f25d3,753b93a5,ac4c9e3c,230,2.79,0.14,3,0
+10,Sun,2022-11-27,16:30,Atlético Madrid,1.0,1–6,3.9,Barcelona,b56c2667,15f49df1,02a46818,230,0.23,2.69,1,6
+11,Sat,2022-12-03,12:00,Sevilla,0.7,2–2,1.5,UDG Tenerife,215d9026,4c088abe,96af732a,230,0.78,1.96,2,2
+11,Sat,2022-12-03,12:00,Barcelona,2.6,2–1,1.6,Real Sociedad,15f49df1,c21f25d3,b0712d4d,230,1.95,0.87,2,1
+11,Sat,2022-12-03,16:00,Athletic Club,0.8,0–2,1.9,Madrid CFF,94929c05,89818574,068d3cc4,230,0.67,2.11,0,2
+11,Sat,2022-12-03,18:15,Levante Planas,1.2,1–4,2.2,Real Madrid,753b93a5,54582b93,6edb1c14,230,0.81,1.99,1,4
+11,Sun,2022-12-04,12:00,Valencia,0.4,0–1,1.7,Atlético Madrid,f96ff499,b56c2667,2016acf4,230,0.47,2.31,0,1
+11,Sun,2022-12-04,12:00,Sporting Huelva,1.7,2–2,0.4,Alavés,27acb0af,aa11fb42,25a42680,230,2.32,0.46,2,2
+11,Sun,2022-12-04,16:00,Alhama,0.6,0–1,1.1,Villarreal,e9fecaf2,7a7bef84,00a4b1aa,230,0.93,1.75,0,1
+11,Sun,2022-12-04,18:00,Real Betis,0.1,0–7,5.3,Levante,74142337,0f4738a8,0e5cb87a,230,0.01,2.98,0,7
+2,Fri,2022-09-16,19:30,Arsenal,3.6,4–0,0.3,Brighton,411b1108,fa2752bc,8abbbdd6,189,2.87,0.08,4,0
+2,Sat,2022-09-17,12:00,Manchester Utd,2.3,4–0,0.0,Reading,0bbd83f6,5d020380,b9b31a5e,189,2.8,0.1,4,0
+2,Sun,2022-09-18,12:30,Aston Villa,1.4,4–3,0.7,Manchester City,53157aa8,9ce68f8a,a50b9d0f,189,1.89,0.84,4,3
+2,Sun,2022-09-18,15:00,West Ham,0.4,1–0,0.6,Everton,52d65cea,c4989550,2dfc40e0,189,1.07,1.48,1,0
+2,Sun,2022-09-18,15:00,Leicester City WFC,0.3,1–2,0.3,Tottenham,23bce84e,e8e4577c,e889d8ed,189,1.2,1.2,1,2
+2,Sun,2022-09-18,17:00,Liverpool,2.0,2–1,1.3,Chelsea,00f74a56,a6a4e67d,f2e3f0be,189,1.82,0.96,2,1
+3,Sat,2022-09-24,13:30,Arsenal,1.5,4–0,0.2,Tottenham,411b1108,e8e4577c,e5e5dfef,189,2.38,0.38,4,0
+3,Sun,2022-09-25,14:00,Brighton,1.8,2–1,1.4,Reading,fa2752bc,5d020380,6f40e81c,189,1.64,1.13,2,1
+3,Sun,2022-09-25,15:00,West Ham,0.6,0–2,1.2,Manchester Utd,52d65cea,0bbd83f6,6b833a77,189,0.87,1.82,0,2
+3,Sun,2022-09-25,15:00,Leicester City WFC,0.8,0–2,1.4,Aston Villa,23bce84e,53157aa8,9290a89f,189,0.91,1.82,0,2
+3,Sun,2022-09-25,16:00,Chelsea,1.4,2–0,0.9,Manchester City,a6a4e67d,9ce68f8a,30457989,189,1.73,1.0,2,0
+3,Sun,2022-09-25,18:45,Liverpool,1.4,0–3,1.3,Everton,00f74a56,c4989550,fc35d143,189,1.44,1.31,0,3
+1,Wed,2022-09-28,19:05,Chelsea,2.5,3–1,0.2,West Ham,a6a4e67d,52d65cea,a43c9b90,189,2.73,0.17,3,1
+1,Thu,2022-09-29,18:30,Everton,0.3,1–0,0.2,Leicester City WFC,c4989550,23bce84e,f254e643,189,1.31,1.05,1,0
+4,Sat,2022-10-15,12:30,Aston Villa,2.3,1–2,1.0,West Ham,53157aa8,52d65cea,870bd6cc,189,2.19,0.63,1,2
+4,Sun,2022-10-16,12:00,Manchester Utd,1.5,4–0,0.4,Brighton,0bbd83f6,fa2752bc,953b5a52,189,2.21,0.54,4,0
+4,Sun,2022-10-16,13:00,Everton,0.7,1–3,2.3,Chelsea,c4989550,a6a4e67d,2f9fc086,189,0.46,2.37,1,3
+4,Sun,2022-10-16,14:00,Tottenham,1.1,1–0,0.5,Liverpool,e8e4577c,00f74a56,41786f2a,189,1.83,0.84,1,0
+4,Sun,2022-10-16,14:00,Manchester City,3.3,4–0,0.2,Leicester City WFC,9ce68f8a,23bce84e,d1a1d0bb,189,2.87,0.08,4,0
+4,Sun,2022-10-16,18:45,Reading,0.7,0–1,2.1,Arsenal,5d020380,411b1108,a2480bce,189,0.53,2.28,0,1
+5,Sat,2022-10-22,11:30,Tottenham,0.1,0–3,0.9,Manchester City,e8e4577c,9ce68f8a,b1f0dd4a,189,0.52,2.07,0,3
+5,Sat,2022-10-22,12:30,Aston Villa,0.7,0–1,0.8,Everton,53157aa8,c4989550,511bd5e3,189,1.23,1.4,0,1
+5,Sun,2022-10-23,12:00,Liverpool,0.7,0–2,1.4,Arsenal,00f74a56,411b1108,d51d1877,189,0.84,1.88,0,2
+5,Sun,2022-10-23,15:00,Leicester City WFC,0.3,0–1,0.8,Manchester Utd,23bce84e,0bbd83f6,5e700126,189,0.81,1.77,0,1
+5,Sun,2022-10-23,15:00,West Ham,1.6,3–2,1.4,Reading,52d65cea,5d020380,8c2ebe18,189,1.51,1.25,3,2
+5,Sun,2022-10-23,18:45,Brighton,1.0,0–2,2.0,Chelsea,fa2752bc,a6a4e67d,538677e8,189,0.76,2.03,0,2
+6,Sun,2022-10-30,14:00,Reading,0.4,2–1,0.3,Leicester City WFC,5d020380,23bce84e,15fc899a,189,1.33,1.11,2,1
+6,Sun,2022-10-30,14:00,Manchester City,2.1,2–1,0.9,Liverpool,9ce68f8a,00f74a56,2c61756e,189,2.15,0.65,2,1
+6,Sun,2022-10-30,14:00,Brighton,0.8,0–8,2.8,Tottenham,fa2752bc,e8e4577c,4596f4cb,189,0.37,2.5,0,8
+6,Sun,2022-10-30,14:00,Everton,0.3,0–3,0.7,Manchester Utd,c4989550,0bbd83f6,9702c681,189,0.88,1.67,0,3
+6,Sun,2022-10-30,14:00,Chelsea,1.7,3–1,0.6,Aston Villa,a6a4e67d,53157aa8,fb3a625e,189,2.16,0.61,3,1
+6,Sun,2022-10-30,18:45,Arsenal,1.6,3–1,1.3,West Ham,411b1108,52d65cea,ce07ffbb,189,1.57,1.18,3,1
+7,Sun,2022-11-06,14:00,Leicester City WFC,0.2,0–4,1.9,Arsenal,23bce84e,411b1108,716095ef,189,0.27,2.55,0,4
+7,Sun,2022-11-06,14:00,Reading,0.1,0–3,1.4,Manchester City,5d020380,9ce68f8a,7650622e,189,0.33,2.41,0,3
+7,Sun,2022-11-06,14:00,Liverpool,1.1,0–1,1.5,Aston Villa,00f74a56,53157aa8,fb06e388,189,1.09,1.66,0,1
+7,Sun,2022-11-06,15:00,West Ham,1.1,4–5,3.5,Brighton,52d65cea,fa2752bc,9170bfbb,189,0.33,2.56,4,5
+7,Sun,2022-11-06,18:45,Manchester Utd,0.5,1–3,1.2,Chelsea,0bbd83f6,a6a4e67d,35532e85,189,0.76,1.93,1,3
+8,Sat,2022-11-19,15:00,Everton,0.4,1–2,3.7,Manchester City,c4989550,9ce68f8a,a6a55939,189,0.1,2.85,1,2
+8,Sat,2022-11-19,17:30,Arsenal,0.8,2–3,0.9,Manchester Utd,411b1108,0bbd83f6,2d9247a4,189,1.24,1.41,2,3
+8,Sun,2022-11-20,13:00,Chelsea,1.5,3–0,0.7,Tottenham,a6a4e67d,e8e4577c,a382ec82,189,1.96,0.78,3,0
+8,Sun,2022-11-20,14:00,Aston Villa,2.4,3–1,0.4,Reading,53157aa8,5d020380,efe51e8b,189,2.59,0.28,3,1
+8,Sun,2022-11-20,14:00,Brighton,1.5,3–3,1.3,Liverpool,fa2752bc,00f74a56,f19b5f1e,189,1.5,1.24,3,3
+8,Sun,2022-11-20,15:00,West Ham,0.6,1–0,1.3,Leicester City WFC,52d65cea,23bce84e,c669fec9,189,0.81,1.9,1,0
+1,Thu,2022-11-24,19:00,Reading,1.7,3–3,1.1,Liverpool,5d020380,00f74a56,84723e44,189,1.78,0.98,3,3
+9,Sat,2022-12-03,12:30,Manchester Utd,2.3,5–0,0.4,Aston Villa,0bbd83f6,53157aa8,625d157f,189,2.56,0.29,5,0
+9,Sat,2022-12-03,14:00,Arsenal,3.1,1–0,1.3,Everton,411b1108,c4989550,76b85438,189,2.33,0.53,1,0
+9,Sat,2022-12-03,15:00,Leicester City WFC,0.2,0–8,4.1,Chelsea,23bce84e,a6a4e67d,faf0c772,189,0.04,2.93,0,8
+9,Sun,2022-12-04,12:30,Reading,1.3,1–0,0.9,Tottenham,5d020380,e8e4577c,f5134a50,189,1.65,1.06,1,0
+9,Sun,2022-12-04,14:00,Manchester City,3.0,3–1,1.0,Brighton,9ce68f8a,fa2752bc,4f74da12,189,2.45,0.42,3,1
+9,Sun,2022-12-04,14:00,Liverpool,2.3,2–0,0.3,West Ham,00f74a56,52d65cea,a720778e,189,2.62,0.24,2,0
+1,Fri,2022-09-09,21:00,Paris S-G,2.8,2–0,0.3,Soyaux,80595417,b54d31b3,179fdda2,193,2.74,0.16,2,0
+1,Sat,2022-09-10,14:30,Bordeaux,2.0,4–2,0.7,Le Havre,69dee2b0,c57b7254,0efd71e8,193,2.24,0.56,4,2
+1,Sat,2022-09-10,14:30,Guingamp,0.5,0–3,2.5,Fleury,abc4f6d7,4fcc2996,2da1cf83,193,0.3,2.56,0,3
+1,Sat,2022-09-10,14:30,Paris FC,1.3,2–0,0.3,Rodez,28d9b675,700c41b4,687e763d,193,2.16,0.55,2,0
+1,Sat,2022-09-10,14:30,Montpellier,2.3,3–0,1.2,Dijon,7bbdea71,68f9fd31,e44f6a55,193,2.05,0.76,3,0
+1,Sun,2022-09-11,12:45,Stade de Reims,0.7,1–5,3.6,Lyon,e3696882,7f2012ad,44af2e2f,193,0.18,2.74,1,5
+2,Fri,2022-09-16,18:30,Fleury,1.2,1–1,0.9,Paris FC,4fcc2996,28d9b675,5c98dc0f,193,1.58,1.12,1,1
+2,Sat,2022-09-17,14:30,Dijon,0.2,1–1,1.0,Bordeaux,68f9fd31,69dee2b0,1d36cdee,193,0.59,2.05,1,1
+2,Sat,2022-09-17,14:30,Stade de Reims,0.1,1–3,2.9,Montpellier,e3696882,7bbdea71,52b918a2,193,0.08,2.85,1,3
+2,Sat,2022-09-17,14:30,Rodez,0.2,0–4,3.1,Paris S-G,700c41b4,80595417,d97dd33f,193,0.1,2.84,0,4
+2,Sun,2022-09-18,12:45,Le Havre,1.7,1–0,0.6,Guingamp,c57b7254,abc4f6d7,58a3a715,193,2.15,0.62,1,0
+2,Sun,2022-09-18,15:00,Lyon,3.2,2–1,0.1,Soyaux,7f2012ad,b54d31b3,dab9fe0e,193,2.89,0.06,2,1
+3,Fri,2022-09-23,18:30,Paris FC,2.6,1–0,0.4,Le Havre,28d9b675,c57b7254,4dcbc223,193,2.65,0.23,1,0
+3,Fri,2022-09-23,21:00,Montpellier,1.2,1–3,2.1,Lyon,7bbdea71,7f2012ad,776664c3,193,0.84,1.95,1,3
+3,Sat,2022-09-24,14:30,Soyaux,1.5,2–0,1.0,Rodez,b54d31b3,700c41b4,7a21cbe3,193,1.73,1.01,2,0
+3,Sat,2022-09-24,14:30,Guingamp,1.3,0–1,1.3,Dijon,abc4f6d7,68f9fd31,c0292e3c,193,1.37,1.36,0,1
+3,Sat,2022-09-24,14:30,Bordeaux,0.7,0–1,1.0,Stade de Reims,69dee2b0,e3696882,d242ed2b,193,1.09,1.58,0,1
+3,Sun,2022-09-25,12:45,Paris S-G,1.7,2–1,0.4,Fleury,80595417,4fcc2996,53b74a04,193,2.31,0.46,2,1
+4,Fri,2022-09-30,21:00,Montpellier,0.8,0–0,0.4,Bordeaux,7bbdea71,69dee2b0,d73a143d,193,1.66,0.93,0,0
+4,Sat,2022-10-01,14:30,Fleury,1.2,1–1,0.4,Soyaux,4fcc2996,b54d31b3,76f2290e,193,2.01,0.68,1,1
+4,Sat,2022-10-01,14:30,Stade de Reims,1.1,3–0,0.7,Guingamp,e3696882,abc4f6d7,b9ec2fe7,193,1.67,1.01,3,0
+4,Sat,2022-10-01,14:30,Dijon,0.4,0–2,1.8,Paris FC,68f9fd31,28d9b675,bcb979b2,193,0.43,2.36,0,2
+4,Sat,2022-10-01,14:30,Lyon,1.6,2–0,0.1,Rodez,7f2012ad,700c41b4,fa918e8d,193,2.52,0.27,2,0
+4,Sun,2022-10-02,12:45,Le Havre,0.3,2–2,1.9,Paris S-G,c57b7254,80595417,e1794192,193,0.33,2.49,2,2
+5,Fri,2022-10-14,18:30,Paris FC,1.9,2–2,0.5,Stade de Reims,28d9b675,e3696882,21e10e0e,193,2.34,0.47,2,2
+5,Sat,2022-10-15,14:30,Guingamp,1.4,1–4,2.7,Montpellier,abc4f6d7,7bbdea71,30301291,193,0.71,2.12,1,4
+5,Sat,2022-10-15,14:30,Paris S-G,2.4,3–1,0.2,Dijon,80595417,68f9fd31,82aac7cc,193,2.71,0.18,3,1
+5,Sat,2022-10-15,14:30,Soyaux,0.7,1–4,2.5,Le Havre,b54d31b3,c57b7254,fc0b6a39,193,0.4,2.45,1,4
+5,Sun,2022-10-16,12:45,Bordeaux,0.6,1–3,2.0,Lyon,69dee2b0,7f2012ad,75a9cd7b,193,0.5,2.31,1,3
+5,Sun,2022-10-16,12:45,Rodez,1.0,2–1,0.3,Fleury,700c41b4,4fcc2996,9e1717c3,193,1.95,0.69,2,1
+6,Fri,2022-10-28,21:00,Montpellier,1.1,1–3,1.5,Paris FC,7bbdea71,28d9b675,788859b8,193,1.09,1.65,1,3
+6,Sat,2022-10-29,14:30,Le Havre,2.1,2–1,1.5,Rodez,c57b7254,700c41b4,41f6a8e6,193,1.76,1.03,2,1
+6,Sat,2022-10-29,14:30,Dijon,2.2,1–0,0.5,Soyaux,68f9fd31,b54d31b3,716f1446,193,2.45,0.38,1,0
+6,Sat,2022-10-29,14:30,Stade de Reims,0.5,0–2,2.1,Paris S-G,e3696882,80595417,aafd303e,193,0.4,2.42,0,2
+6,Sat,2022-10-29,14:30,Bordeaux,2.1,3–1,1.4,Guingamp,69dee2b0,abc4f6d7,da0baca9,193,1.82,0.97,3,1
+6,Sun,2022-10-30,12:45,Lyon,1.8,1–0,0.1,Fleury,7f2012ad,4fcc2996,84429fb6,193,2.59,0.23,1,0
+7,Fri,2022-11-04,18:30,Rodez,2.3,1–1,0.9,Dijon,700c41b4,68f9fd31,3aa1b2cb,193,2.24,0.58,1,1
+7,Fri,2022-11-04,21:00,Paris FC,1.2,1–1,0.7,Bordeaux,28d9b675,69dee2b0,ed0b655e,193,1.75,0.95,1,1
+7,Sat,2022-11-05,13:30,Paris S-G,2.0,2–2,0.3,Montpellier,80595417,7bbdea71,1efc2a63,193,2.53,0.3,2,2
+7,Sat,2022-11-05,14:30,Fleury,2.8,3–0,0.6,Le Havre,4fcc2996,c57b7254,43b7a95d,193,2.6,0.28,3,0
+7,Sat,2022-11-05,14:30,Soyaux,0.8,1–4,2.3,Stade de Reims,b54d31b3,e3696882,5a0bb124,193,0.52,2.31,1,4
+7,Sat,2022-11-05,14:30,Guingamp,0.3,0–0,1.6,Lyon,abc4f6d7,7f2012ad,7d674122,193,0.43,2.34,0,0
+8,Sat,2022-11-19,14:30,Montpellier,1.7,2–2,1.4,Soyaux,7bbdea71,b54d31b3,15871da5,193,1.59,1.17,2,2
+8,Sat,2022-11-19,14:30,Guingamp,0.6,0–3,1.9,Paris FC,abc4f6d7,28d9b675,3f3b0984,193,0.54,2.26,0,3
+8,Sat,2022-11-19,14:30,Dijon,0.9,1–5,2.9,Fleury,68f9fd31,4fcc2996,65126f9c,193,0.4,2.47,1,5
+8,Sat,2022-11-19,14:30,Stade de Reims,0.4,0–0,0.2,Rodez,e3696882,700c41b4,f568375f,193,1.44,0.97,0,0
+8,Sun,2022-11-20,14:00,Bordeaux,0.6,0–3,1.2,Paris S-G,69dee2b0,80595417,d519c9b4,193,0.86,1.83,0,3
+8,Sun,2022-11-20,16:00,Lyon,2.0,1–0,0.2,Le Havre,7f2012ad,c57b7254,d96b1181,193,2.6,0.24,1,0
+9,Fri,2022-11-25,21:00,Fleury,0.6,1–0,0.3,Stade de Reims,4fcc2996,e3696882,a425f1e2,193,1.58,0.93,1,0
+9,Sat,2022-11-26,14:30,Montpellier,,2–1,,Rodez,7bbdea71,700c41b4,3d48e698,193,0.0,0.0,2,1
+9,Sat,2022-11-26,14:30,Paris S-G,0.7,1–0,0.5,Guingamp,80595417,abc4f6d7,47f6702c,193,1.48,1.1,1,0
+9,Sat,2022-11-26,14:30,Soyaux,0.3,0–1,1.4,Bordeaux,b54d31b3,69dee2b0,b4690d49,193,0.51,2.22,0,1
+9,Sat,2022-11-26,14:30,Le Havre,2.6,5–0,0.3,Dijon,c57b7254,68f9fd31,dcd5dde3,193,2.7,0.19,5,0
+9,Sun,2022-11-27,16:00,Paris FC,1.3,2–3,2.9,Lyon,28d9b675,7f2012ad,c8b3217f,193,0.59,2.26,2,3
+10,Fri,2022-12-02,18:00,Montpellier,1.1,1–1,1.5,Fleury,7bbdea71,4fcc2996,3bebb84b,193,1.09,1.65,1,1
+10,Sat,2022-12-03,14:30,Stade de Reims,2.0,3–1,0.6,Le Havre,e3696882,c57b7254,39d06a6d,193,2.31,0.5,3,1
+10,Sat,2022-12-03,14:30,Bordeaux,2.9,3–1,0.4,Rodez,69dee2b0,700c41b4,9741b470,193,2.72,0.19,3,1
+10,Sat,2022-12-03,14:30,Guingamp,2.6,3–1,1.1,Soyaux,abc4f6d7,b54d31b3,eb0dcfaf,193,2.25,0.59,3,1
+10,Sat,2022-12-03,14:30,Lyon,2.7,8–0,0.2,Dijon,7f2012ad,68f9fd31,ff0d12e8,193,2.77,0.14,8,0
+10,Sun,2022-12-04,13:00,Paris FC,0.4,0–1,0.8,Paris S-G,28d9b675,80595417,6de014d8,193,0.91,1.69,0,1
+1,Fri,2022-09-16,19:15,E. Frankfurt,0.7,0–0,0.5,Bayern Munich,97b7c0e8,51ec22be,0bc4cc72,183,1.48,1.1,0,0
+1,Sat,2022-09-17,13:00,Wolfsburg,4.2,4–0,0.9,Essen,a1393014,becc1dd0,85034827,183,2.77,0.16,4,0
+1,Sun,2022-09-18,13:00,Köln,1.9,3–1,1.1,Hoffenheim,88ddc98e,87705c62,63eaced8,183,1.91,0.87,3,1
+1,Sun,2022-09-18,13:00,SV Meppen,1.0,1–2,0.8,Freiburg,4ed1418c,b4de690d,b3316cc1,183,1.5,1.17,1,2
+1,Sun,2022-09-18,16:00,Werder Bremen,0.7,1–1,0.7,Turbine Potsdam,7adbf480,de550500,4434580a,183,1.32,1.3,1,1
+1,Sun,2022-09-18,16:00,MSV Duisburg,0.0,0–1,2.4,Leverkusen,0580d9a9,c6d4860a,cb1a84dd,183,0.09,2.82,0,1
+2,Fri,2022-09-23,19:15,Leverkusen,1.7,1–0,1.6,Köln,c6d4860a,88ddc98e,e75fe3df,183,1.45,1.31,1,0
+2,Sat,2022-09-24,17:55,Hoffenheim,0.7,1–2,2.9,Wolfsburg,87705c62,a1393014,416a279c,183,0.3,2.58,1,2
+2,Sun,2022-09-25,13:00,Bayern Munich,2.1,3–0,0.7,Werder Bremen,51ec22be,7adbf480,9cd6a3d7,183,2.29,0.53,3,0
+2,Sun,2022-09-25,13:00,Turbine Potsdam,0.4,0–3,1.1,MSV Duisburg,de550500,0580d9a9,f539853e,183,0.74,1.93,0,3
+2,Sun,2022-09-25,16:00,Essen,1.4,1–0,0.2,SV Meppen,becc1dd0,4ed1418c,cbcfc556,183,2.33,0.41,1,0
+2,Sun,2022-09-25,16:00,Freiburg,1.4,2–4,2.2,E. Frankfurt,b4de690d,97b7c0e8,d8d31c0f,183,0.93,1.87,2,4
+3,Fri,2022-09-30,19:16,Wolfsburg,2.2,6–1,1.0,Leverkusen,a1393014,c6d4860a,9c2f95f7,183,2.13,0.68,6,1
+3,Sat,2022-10-01,13:01,Köln,2.5,4–2,0.8,Turbine Potsdam,88ddc98e,de550500,95b6c4f6,183,2.38,0.46,4,2
+3,Sun,2022-10-02,13:01,SV Meppen,0.7,0–2,3.2,Hoffenheim,4ed1418c,87705c62,2aee6093,183,0.24,2.66,0,2
+3,Sun,2022-10-02,13:01,E. Frankfurt,1.4,3–1,0.2,Werder Bremen,97b7c0e8,7adbf480,da505c7a,183,2.33,0.41,3,1
+3,Sun,2022-10-02,16:01,MSV Duisburg,0.3,0–4,2.4,Bayern Munich,0580d9a9,51ec22be,057b4349,183,0.22,2.66,0,4
+3,Sun,2022-10-02,16:01,Freiburg,2.9,5–2,2.1,Essen,b4de690d,becc1dd0,4d067ac9,183,1.83,1.0,5,2
+4,Fri,2022-10-14,19:16,Hoffenheim,0.7,3–2,1.7,Freiburg,87705c62,b4de690d,fd6c588d,183,0.68,2.08,3,2
+4,Sat,2022-10-15,13:01,Turbine Potsdam,0.1,0–2,4.1,Wolfsburg,de550500,a1393014,6280bee5,183,0.03,2.95,0,2
+4,Sun,2022-10-16,13:01,Leverkusen,0.7,0–1,1.2,SV Meppen,c6d4860a,4ed1418c,9e4136f1,183,0.95,1.74,0,1
+4,Sun,2022-10-16,13:01,Bayern Munich,2.2,4–0,0.3,Köln,51ec22be,88ddc98e,bca15d73,183,2.59,0.26,4,0
+4,Sun,2022-10-16,16:01,Essen,0.1,0–4,1.3,E. Frankfurt,becc1dd0,97b7c0e8,aae3875c,183,0.36,2.35,0,4
+4,Sun,2022-10-16,16:01,Werder Bremen,0.9,0–0,0.3,MSV Duisburg,7adbf480,0580d9a9,ca87a860,183,1.87,0.74,0,0
+5,Fri,2022-10-21,19:15,SV Meppen,0.9,2–0,1.1,Turbine Potsdam,4ed1418c,de550500,13655ef9,183,1.18,1.51,2,0
+5,Sat,2022-10-22,13:00,Freiburg,1.0,3–2,1.8,Leverkusen,b4de690d,c6d4860a,fd3b3db4,183,0.85,1.92,3,2
+5,Sun,2022-10-23,13:00,Essen,0.9,2–3,1.3,Hoffenheim,becc1dd0,87705c62,b60718f4,183,1.06,1.66,2,3
+5,Sun,2022-10-23,14:00,Wolfsburg,1.0,2–1,0.9,Bayern Munich,a1393014,51ec22be,a68ad3b3,183,1.42,1.27,2,1
+5,Sun,2022-10-23,16:00,E. Frankfurt,3.1,3–2,0.4,MSV Duisburg,97b7c0e8,0580d9a9,a1dabd39,183,2.77,0.15,3,2
+5,Sun,2022-10-23,16:00,Köln,1.4,2–0,1.9,Werder Bremen,88ddc98e,7adbf480,b900a3e0,183,1.07,1.7,2,0
+6,Fri,2022-10-28,19:15,MSV Duisburg,1.3,2–1,1.4,Köln,0580d9a9,88ddc98e,e636ea25,183,1.3,1.44,2,1
+6,Sat,2022-10-29,13:00,Hoffenheim,1.5,3–3,2.3,E. Frankfurt,87705c62,97b7c0e8,170b15f5,183,0.94,1.86,3,3
+6,Sun,2022-10-30,13:00,Bayern Munich,2.9,3–1,0.1,SV Meppen,51ec22be,4ed1418c,69997094,183,2.85,0.08,3,1
+6,Sun,2022-10-30,13:00,Turbine Potsdam,0.3,0–5,3.3,Freiburg,de550500,b4de690d,f1a3f9dd,183,0.11,2.83,0,5
+6,Sun,2022-10-30,16:00,Leverkusen,2.1,6–0,0.4,Essen,c6d4860a,becc1dd0,5110c4e9,183,2.49,0.34,6,0
+6,Sun,2022-10-30,16:00,Werder Bremen,0.9,2–3,2.6,Wolfsburg,7adbf480,a1393014,6d16a8f3,183,0.48,2.37,2,3
+7,Fri,2022-11-04,19:15,Hoffenheim,2.0,3–1,1.8,Leverkusen,87705c62,c6d4860a,a088383f,183,1.51,1.28,3,1
+7,Sat,2022-11-05,13:00,Freiburg,1.0,0–3,2.7,Bayern Munich,b4de690d,51ec22be,184dc6a5,183,0.5,2.35,0,3
+7,Sun,2022-11-06,13:00,Wolfsburg,2.9,4–0,0.1,MSV Duisburg,a1393014,0580d9a9,17a7ce03,183,2.85,0.08,4,0
+7,Sun,2022-11-06,13:00,Essen,2.1,2–1,0.5,Turbine Potsdam,becc1dd0,de550500,a6be42a3,183,2.42,0.4,2,1
+7,Sun,2022-11-06,16:00,SV Meppen,1.3,2–0,1.0,Werder Bremen,4ed1418c,7adbf480,1dfdd76d,183,1.58,1.14,2,0
+7,Sun,2022-11-06,16:00,E. Frankfurt,1.5,2–0,1.2,Köln,97b7c0e8,88ddc98e,80ff8819,183,1.58,1.16,2,0
+8,Fri,2022-11-25,19:15,Turbine Potsdam,1.3,1–3,3.0,Hoffenheim,de550500,87705c62,1b6aad2d,183,0.56,2.3,1,3
+8,Sat,2022-11-26,14:00,E. Frankfurt,2.0,1–0,0.2,Leverkusen,97b7c0e8,c6d4860a,97b076a8,183,2.59,0.25,1,0
+8,Sat,2022-11-26,16:00,Werder Bremen,0.6,1–2,0.9,Freiburg,7adbf480,b4de690d,0a2fc4a2,183,1.06,1.58,1,2
+8,Sun,2022-11-27,13:00,MSV Duisburg,0.9,1–0,1.1,SV Meppen,0580d9a9,4ed1418c,6df87ec4,183,1.19,1.51,1,0
+8,Sun,2022-11-27,13:00,Köln,0.4,0–4,2.0,Wolfsburg,88ddc98e,a1393014,be369ec4,183,0.37,2.45,0,4
+8,Sun,2022-11-27,16:00,Bayern Munich,1.6,2–0,0.4,Essen,51ec22be,becc1dd0,d71ff616,183,2.26,0.5,2,0
+9,Fri,2022-12-02,19:15,Hoffenheim,0.5,0–4,3.1,Bayern Munich,87705c62,51ec22be,8445ef00,183,0.19,2.73,0,4
+9,Sat,2022-12-03,13:00,Wolfsburg,1.4,5–0,0.8,E. Frankfurt,a1393014,97b7c0e8,3de5ed56,183,1.81,0.92,5,0
+9,Sat,2022-12-03,16:00,Freiburg,3.5,4–1,0.1,MSV Duisburg,b4de690d,0580d9a9,c9df2a37,183,2.91,0.05,4,1
+9,Sun,2022-12-04,13:00,Leverkusen,2.6,3–0,0.3,Turbine Potsdam,c6d4860a,de550500,38d0713d,183,2.7,0.19,3,0
+9,Sun,2022-12-04,13:00,SV Meppen,0.7,1–0,0.9,Köln,4ed1418c,88ddc98e,9145b9d9,183,1.16,1.48,1,0
+9,Sun,2022-12-04,16:00,Essen,2.0,0–0,0.7,Werder Bremen,becc1dd0,7adbf480,0d584ec0,183,2.24,0.56,0,0
+1,Sat,2022-08-27,20:30,FC Como Women,0.1,0–6,2.9,Juventus,756c9acb,613577b8,2179a94d,208,0.08,2.85,0,6
+1,Sun,2022-08-28,17:30,ASD Calcio Pomigliano,0.2,0–2,2.4,AS Roma,9f18ced7,02f8d026,3e693ce2,208,0.17,2.71,0,2
+1,Sun,2022-08-28,17:30,AC Milan,0.7,1–3,1.3,Fiorentina,54da9a57,c99ff6e5,16bee04d,208,0.89,1.82,1,3
+1,Sun,2022-08-28,20:30,Internazionale,2.8,4–1,0.8,Parma Calcio 1913,06d05f19,f7d05cb5,38d0ecda,208,2.49,0.38,4,1
+1,Sun,2022-08-28,20:30,Sassuolo,1.4,1–2,2.7,UC Sampdoria,a8e83f23,58e367c3,336480f1,208,0.71,2.12,1,2
+2,Sat,2022-09-10,14:30,AS Roma,1.4,2–0,0.6,AC Milan,02f8d026,54da9a57,1202a1b3,208,1.97,0.75,2,0
+2,Sun,2022-09-11,12:30,UC Sampdoria,1.6,2–1,0.9,ASD Calcio Pomigliano,58e367c3,9f18ced7,01c9aa4c,208,1.85,0.89,2,1
+2,Sun,2022-09-11,14:30,Juventus,1.4,3–3,0.6,Internazionale,613577b8,06d05f19,fe002082,208,1.96,0.76,3,3
+2,Sun,2022-09-11,17:00,Fiorentina,0.8,2–1,0.9,FC Como Women,c99ff6e5,756c9acb,8e426bb2,208,1.25,1.41,2,1
+2,Mon,2022-09-12,19:00,Parma Calcio 1913,2.0,2–1,0.9,Sassuolo,f7d05cb5,a8e83f23,462a84a1,208,2.1,0.69,2,1
+3,Fri,2022-09-16,14:30,Juventus,0.7,1–0,1.2,AS Roma,613577b8,02f8d026,3e1dbe3e,208,0.95,1.75,1,0
+3,Sat,2022-09-17,14:30,Internazionale,2.5,6–1,1.8,ASD Calcio Pomigliano,06d05f19,9f18ced7,19efded9,208,1.79,1.02,6,1
+3,Sun,2022-09-18,12:30,Fiorentina,2.6,2–1,1.2,Parma Calcio 1913,c99ff6e5,f7d05cb5,f514c68b,208,2.19,0.64,2,1
+3,Sun,2022-09-18,14:30,FC Como Women,0.6,0–1,1.2,UC Sampdoria,756c9acb,58e367c3,011a6f1d,208,0.87,1.83,0,1
+3,Sun,2022-09-18,14:30,AC Milan,1.6,3–1,0.4,Sassuolo,54da9a57,a8e83f23,c0581735,208,2.26,0.5,3,1
+4,Sat,2022-09-24,12:30,Sassuolo,0.5,1–1,1.4,Juventus,a8e83f23,613577b8,e9cf06d8,208,0.67,2.06,1,1
+4,Sat,2022-09-24,14:30,Parma Calcio 1913,0.7,0–4,3.3,AC Milan,f7d05cb5,54da9a57,e12fad04,208,0.23,2.68,0,4
+4,Sat,2022-09-24,14:30,AS Roma,1.6,2–1,0.4,Fiorentina,02f8d026,c99ff6e5,a140a2d9,208,2.27,0.5,2,1
+4,Sun,2022-09-25,12:30,ASD Calcio Pomigliano,1.6,2–2,1.4,FC Como Women,9f18ced7,756c9acb,a145a10f,208,1.52,1.24,2,2
+4,Sun,2022-09-25,14:30,UC Sampdoria,1.2,0–2,2.6,Internazionale,58e367c3,06d05f19,955ee1bf,208,0.64,2.19,0,2
+5,Fri,2022-09-30,19:00,FC Como Women,2.2,1–3,1.7,Internazionale,756c9acb,06d05f19,aa367df2,208,1.68,1.12,1,3
+5,Sat,2022-10-01,12:30,Fiorentina,3.1,2–0,0.4,Sassuolo,c99ff6e5,a8e83f23,836dc4f6,208,2.77,0.15,2,0
+5,Sat,2022-10-01,14:30,AC Milan,2.1,2–1,1.2,UC Sampdoria,54da9a57,58e367c3,8776170a,208,1.95,0.84,2,1
+5,Sun,2022-10-02,12:30,Juventus,1.9,3–0,0.1,ASD Calcio Pomigliano,613577b8,9f18ced7,54cd9665,208,2.63,0.21,3,0
+5,Sun,2022-10-02,14:30,AS Roma,2.3,5–0,0.3,Parma Calcio 1913,02f8d026,f7d05cb5,dc78abbd,208,2.62,0.24,5,0
+6,Sat,2022-10-15,13:30,ASD Calcio Pomigliano,1.4,0–1,1.3,Fiorentina,9f18ced7,c99ff6e5,7df94b89,208,1.44,1.3,0,1
+6,Sat,2022-10-15,14:30,FC Como Women,1.4,4–1,1.4,Parma Calcio 1913,756c9acb,f7d05cb5,82fe7aa6,208,1.38,1.36,4,1
+6,Sat,2022-10-15,14:30,Internazionale,2.2,4–0,1.0,AC Milan,06d05f19,54da9a57,0b66a293,208,2.15,0.66,4,0
+6,Sun,2022-10-16,12:30,Sassuolo,0.4,0–1,2.0,AS Roma,a8e83f23,02f8d026,79652e91,208,0.37,2.45,0,1
+6,Sun,2022-10-16,14:30,UC Sampdoria,1.0,0–4,1.9,Juventus,58e367c3,613577b8,ceba8336,208,0.81,1.97,0,4
+7,Sat,2022-10-22,12:30,Parma Calcio 1913,1.1,1–3,0.9,ASD Calcio Pomigliano,f7d05cb5,9f18ced7,c1c36ac1,208,1.5,1.2,1,3
+7,Sat,2022-10-22,14:30,AC Milan,1.5,4–3,2.4,Juventus,54da9a57,613577b8,16c6d37a,208,0.9,1.91,4,3
+7,Sun,2022-10-23,12:30,AS Roma,1.8,1–0,0.3,FC Como Women,02f8d026,756c9acb,70a3cbe0,208,2.44,0.36,1,0
+7,Sun,2022-10-23,14:30,Fiorentina,2.9,2–1,1.3,UC Sampdoria,c99ff6e5,58e367c3,6fd15458,208,2.27,0.58,2,1
+7,Sun,2022-10-23,14:30,Sassuolo,0.4,1–1,2.3,Internazionale,a8e83f23,06d05f19,5e39c928,208,0.3,2.56,1,1
+8,Sat,2022-10-29,14:30,ASD Calcio Pomigliano,1.6,2–1,1.4,AC Milan,9f18ced7,54da9a57,e274c4b0,208,1.51,1.25,2,1
+8,Sat,2022-10-29,14:30,Internazionale,0.5,1–2,1.4,AS Roma,06d05f19,02f8d026,7eaa698d,208,0.67,2.06,1,2
+8,Sun,2022-10-30,12:30,Juventus,2.1,2–0,0.9,Fiorentina,613577b8,c99ff6e5,e6ac0329,208,2.15,0.65,2,0
+8,Sun,2022-10-30,14:30,FC Como Women,2.0,2–2,1.8,Sassuolo,756c9acb,a8e83f23,9248a7ad,208,1.51,1.27,2,2
+8,Sun,2022-10-30,14:30,UC Sampdoria,0.5,0–0,0.9,Parma Calcio 1913,58e367c3,f7d05cb5,05d243c2,208,0.96,1.68,0,0
+9,Sat,2022-11-19,12:30,AS Roma,2.0,2–0,0.1,UC Sampdoria,02f8d026,58e367c3,0a15974a,208,2.66,0.19,2,0
+9,Sat,2022-11-19,14:30,Parma Calcio 1913,0.3,1–2,2.5,Juventus,f7d05cb5,613577b8,84755474,208,0.2,2.68,1,2
+9,Sun,2022-11-20,12:30,Sassuolo,0.9,2–1,0.3,ASD Calcio Pomigliano,a8e83f23,9f18ced7,061a6c10,208,1.86,0.75,2,1
+9,Sun,2022-11-20,14:30,AC Milan,2.3,3–3,1.3,FC Como Women,54da9a57,756c9acb,474e1011,208,2.0,0.81,3,3
+9,Sun,2022-11-20,14:30,Fiorentina,0.8,0–0,2.0,Internazionale,c99ff6e5,06d05f19,98773337,208,0.63,2.17,0,0
+10,Sat,2022-11-26,12:30,AS Roma,3.8,2–0,0.7,ASD Calcio Pomigliano,02f8d026,9f18ced7,b494194c,208,2.77,0.16,2,0
+10,Sat,2022-11-26,14:30,Fiorentina,1.5,1–6,2.2,AC Milan,c99ff6e5,54da9a57,d0f55d84,208,0.98,1.81,1,6
+10,Sun,2022-11-27,12:30,UC Sampdoria,1.9,0–2,1.3,Sassuolo,58e367c3,a8e83f23,796bafa2,208,1.76,1.01,0,2
+10,Sun,2022-11-27,14:30,Juventus,2.6,1–1,1.8,FC Como Women,613577b8,756c9acb,bbb479ee,208,1.85,0.97,1,1
+10,Mon,2022-11-28,19:00,Parma Calcio 1913,1.4,2–2,1.4,Internazionale,f7d05cb5,06d05f19,11e23384,208,1.38,1.36,2,2
+11,Sat,2022-12-03,12:30,ASD Calcio Pomigliano,1.2,1–0,1.0,UC Sampdoria,9f18ced7,58e367c3,ff3d1ccf,208,1.51,1.2,1,0
+11,Sat,2022-12-03,14:30,Internazionale,1.2,0–2,2.3,Juventus,06d05f19,613577b8,01650965,208,0.76,2.05,0,2
+11,Sun,2022-12-04,12:30,Sassuolo,1.6,2–2,1.6,Parma Calcio 1913,a8e83f23,f7d05cb5,7a7e10f0,208,1.4,1.37,2,2
+11,Sun,2022-12-04,14:30,AC Milan,0.6,0–2,1.5,AS Roma,54da9a57,02f8d026,8f348bb5,208,0.7,2.05,0,2
+11,Sun,2022-12-04,14:30,FC Como Women,1.0,2–3,1.3,Fiorentina,756c9acb,c99ff6e5,87079e55,208,1.14,1.58,2,3
