@@ -19,3 +19,4 @@ Actual version of the dashboard:
 | ![](md_images/img1.png) | ![](md_images/img2.png) |
 |---|---|
 | ![](md_images/img3.png) | ![](md_images/img4.png) |
+| ![](md_images/img5.png) | ![](md_images/img6.png) |
