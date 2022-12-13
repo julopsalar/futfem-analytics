@@ -14,6 +14,12 @@ To understand the selection of some KPIs used, it is very important to know some
 - *Stats normalized per 90 minutes*: sometimes teams (or players) have played different number of matches (due to postponed matches, injuries, ...). Using normalized data by MP drops this difference and makes easier to compare between performances.
 - *xPoints*: given the calculations of *xG* for both teams in a match, there are different approaches to calculate how many points should each team have earned by their performance. In this case I am using a basic approximation described in the blog [tacticsNotAntics](https://tacticsnotantics.org/statistical-models-and-analyses/expected-points-models-part-i/)
 
+## Project dependencies
+The libraries required are:
+- numpy, pandas
+- requests, beautyfulSoup
+- mplsoccer: for radar charts
+
 
 Actual version of the dashboard:
 | ![](md_images/img1.png) | ![](md_images/img2.png) |
